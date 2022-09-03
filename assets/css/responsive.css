@@ -1,4 +1,4 @@
-@media only screen and (max-width: 320.98px) {
+@media only screen and (max-width: 575.98px) {
 
 	/*===============header responsive css start=================*/
 	.logo {
@@ -18,8 +18,8 @@
 	/*===============header responsive css start=================*/
 	/*===============main responsive css start=================*/
 	.categories ul {
-		flex-direction: column;
 		align-items: center;
+		flex-wrap: wrap;
 	}
 
 	.categories ul li {
@@ -43,8 +43,85 @@
 	}
 
 	/* ==============------news start----------========= */
+	.news-main .news {
+		padding: 20px 15px 20px 15px;
+		flex-direction: column;
+	}
+
+	.news-main .news .news-thumbnail {
+		width: 100%;
+	}
+
+	.news-main .news .news-inner {
+		margin-left: 0;
+	}
+
+	.news-main .news .other-informations {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 20px;
+
+	}
+	.news-main .news .other-informations .detail-btn {
+		justify-self: center;
+	}
 
 	/* ==============------news end----------========= */
 	/*===============main responsive css end=================*/
+	/*===============footer responsive css start=================*/
+	footer {
+		padding: 50px 0 10px 0;
+
+	}
+	.footer-logo{
+     font-size: 16px !important;
+	}
+	footer .footer-top {
+		flex-direction: column;
+		padding-bottom: 15px;
+	}
+
+	footer .footer-top .important-link ul li a {
+		margin-right: 9px;
+		margin-top: 10px;
+
+	}
+
+	footer .footer-bottom .rights {
+		align-items: start;
+		flex-direction: column;
+		margin-top: 10px;
+	}
+
+	footer .footer-bottom .social ul li {
+		margin-left: 0;
+		margin-right: 10px;
+		margin-top: 10px;
+	}
+
+	footer .footer-bottom p a {
+		font-size: 13px;
+
+	}
+
+	footer .footer-bottom p span {
+		margin: 0 4px;
+	}
+
+	/*===============footer responsive css end=================*/
+	/*===============modal responsive css start=================*/
+	.modal-inner .news-banner {
+		width: auto;
+		height: auto;
+	}
+	.modal-informantions {
+		flex-wrap: wrap;
+	}
+	.published p, .views p {
+		margin-left: 0;
+	}
+	.published{
+      margin-top: 10px;
+	}
+	/*===============modal responsive css end=================*/
 
 }

@@ -256,9 +256,10 @@ nav {
 }
 
 .news-main .news .other-informations {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     align-items: center;
+    justify-content: space-between;
 }
 
 .author {
@@ -297,7 +298,6 @@ nav {
     color: #f2f2f2;
 }
 
-
 .news-main .news .other-informations .views i {
     margin-right: 10px;
     font-size: 20px;
@@ -314,6 +314,7 @@ nav {
 
 .news-main .news .other-informations .ratings ul {
     display: flex;
+    margin-bottom: 0;
 }
 
 .news-main .news .other-informations .ratings ul li {
@@ -325,6 +326,7 @@ nav {
 .news-main .news .other-informations .detail-btn {
     color: #fff;
     font-size: 25px;
+    justify-self: end;
 }
 
 /* =============================
@@ -338,11 +340,15 @@ nav {
 
 }
 
-.modal-body {
-    padding: 30px;
+.modal-header {
+    border: 0;
 }
 
-.modal-top {
+.modal-body {
+    padding: 0 30px 30px 30px;
+}
+
+.modal-informantions {
     display: flex;
     align-items: center;
 
@@ -351,8 +357,8 @@ nav {
 .published p,
 .views p {
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 15px;
     line-height: 21px;
     color: #416a59;
     margin-left: 60px;
@@ -389,6 +395,8 @@ nav {
     font-size: 16px;
     line-height: 21px;
     color: #416a59;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 /* =============================
@@ -434,7 +442,7 @@ footer .footer-top .important-link ul li {
 }
 
 footer .footer-top .important-link ul li a {
-
+    display: inline-block;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -545,6 +553,10 @@ footer .footer-bottom .social ul li a i {
     margin: 60px 0 40px 0;
 }
 
+.modal-author {
+    color: #416a59 !important;
+}
+
 .accordion button {
     background-color: #416a59;
     color: #ffffff;
@@ -564,4 +576,3 @@ footer .footer-bottom .social ul li a i {
 /* =========================
        blog css end
    ========================= */
-
