@@ -29,9 +29,7 @@ p {
     padding: 0;
 }
 
-body {
-    background: #F6F6F7;
-}
+
 
 /* =========================
        common css end
@@ -48,11 +46,15 @@ nav {
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
-    color: #5D5FEF;
+    color: #416a59;
+}
+
+.logo:hover {
+    color: #416a59;
 }
 
 .logo-background {
-    background-color: #5D5FEF;
+    background-color: #416a59;
     color: #ffffff;
     padding: 5px;
     border-radius: 5px;
@@ -75,14 +77,14 @@ nav {
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-    color: #5D5FEF !important;
+    color: #416a59 !important;
 }
 
 .page-link .active::after {
     width: 20px;
     height: 2px;
     border-radius: 2px;
-    background: #5D5FEF;
+    background: #416a59;
     content: '';
     position: absolute;
     bottom: 0;
@@ -96,6 +98,7 @@ nav {
     border-radius: 50%;
     border: 2px solid #DDDDDD;
     margin-left: 35px;
+    padding: 2px;
 }
 
 .nav-profile img {
@@ -128,12 +131,18 @@ nav {
     font-size: 18px;
     line-height: 21px;
     color: #858585;
+    cursor: pointer;
+}
+
+.categories ul .active {
+    font-weight: 500;
+    color: #416a59;
 }
 
 /* ========categories css start======== */
 /* ========search result css start======== */
 .search-result {
-    background: #FFFFFF;
+    background: #416a59;
     border-radius: 8px;
     margin-top: 30px;
 }
@@ -143,7 +152,7 @@ nav {
     font-weight: 400;
     font-size: 18px;
     line-height: 21px;
-    color: #000000;
+    color: #fff;
     padding: 21px 18px;
 }
 
@@ -152,6 +161,53 @@ nav {
 .sort-result {
     display: flex;
     justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.sort-result .manual-sort label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #416a59;
+}
+
+.sort-result .manual-sort select {
+    background: #416a59;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    border: 0;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.sort-result .manual-sort select select {
+    padding-right: 30px;
+}
+
+.sort-result .sort-btns button {
+    background-color: transparent;
+    border: 1px solid #416a59;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #416a59;
+    padding: 10px 20px;
+    margin-left: 10px;
+}
+
+.sort-result .sort-btns .active {
+    background-color: #416a59;
+    color: #ffffff;
 }
 
 /* ========sort result css end======== */
@@ -161,7 +217,7 @@ nav {
     ============================= */
 .news-main .news {
     display: flex;
-    background: #FFFFFF;
+    background: #416a59;
     box-shadow: 4px 6px 13px rgba(215, 215, 215, 0.25);
     border-radius: 12px;
     padding: 20px 50px 20px 20px;
@@ -187,7 +243,7 @@ nav {
     font-weight: 700;
     font-size: 24px;
     line-height: 140%;
-    color: #121221;
+    color: #fff;
     margin-bottom: 15px;
 }
 
@@ -195,7 +251,7 @@ nav {
     font-weight: 400;
     font-size: 16px;
     line-height: 26px;
-    color: #949494;
+    color: #f2f2f2;
     margin-bottom: 20px;
 }
 
@@ -205,71 +261,307 @@ nav {
     align-items: center;
 }
 
-.news-main .news .other-informations .author {
+.author {
     display: flex;
     align-items: center;
 }
 
-.news-main .news .other-informations .author .author-image {
+.author .author-image {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
 
-.news-main .news .other-informations .author .author-image img {
+.author .author-image img {
     width: 100%;
     height: 100%;
 }
 
-.news-main .news .other-informations .author .author-designation {
-  margin-left: 10px;
+.author .author-designation {
+    margin-left: 10px;
 }
 
-.news-main .news .other-informations .author .author-designation .author-name {
+.author .author-designation .author-name {
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    color: #2B2C34;
+    color: #fff;
 }
 
-.news-main .news .other-informations .author .author-designation .author-date {
+.author .author-designation .author-date {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 12px;
     line-height: 21px;
-    color: #718797;
+    color: #f2f2f2;
 }
 
-.news-main .news .other-informations .views {
+
+.news-main .news .other-informations .views i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.news-main .news .other-informations .views span {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
-    color: #515151;
-}
-.news-main .news .other-informations .views i{
-   margin-right: 10px;
-   font-size: 20px;
+    color: #fff;
 }
 
-.news-main .news .other-informations .ratings ul{
+.news-main .news .other-informations .ratings ul {
     display: flex;
 }
-.news-main .news .other-informations .ratings ul li{
+
+.news-main .news .other-informations .ratings ul li {
     font-size: 20px;
-    color: #515151;
+    color: #fff;
     margin-left: 10px;
 }
 
-.news-main .news .other-informations .detail-btn{
-    color: #5D5FEF;
+.news-main .news .other-informations .detail-btn {
+    color: #fff;
     font-size: 25px;
 }
 
 /* =============================
     -------news css end--------
     ============================= */
+/* =============================
+    ---news-modal css start------
+    ============================= */
+.modal-dialog {
+    max-width: 900px;
+
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-top {
+    display: flex;
+    align-items: center;
+
+}
+
+.published p,
+.views p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #416a59;
+    margin-left: 60px;
+}
+
+.modal-inner {
+    margin-top: 30px;
+}
+
+.modal-inner .news-banner {
+    width: auto;
+    height: 450px;
+
+}
+
+.modal-inner .news-banner img {
+    width: 100%;
+    height: 100%;
+}
+
+.detail-titile {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 21px;
+    color: #416a59;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.detail-pragraph {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #416a59;
+}
+
+/* =============================
+    ----news-modal css end-----
+    ============================= */
 /* =========================
        main css end
    ========================= */
+/* =========================
+       footer css start
+   ========================= */
+footer {
+    background-color: #1A3C34;
+    padding: 80px 0 20px 0;
+    margin-top: 60px;
+}
+
+.footer-logo {
+    color: #FFFFFF;
+}
+
+.footer-logo:hover {
+    color: #FFFFFF;
+}
+
+.footer-logo .logo-background {
+    background-color: #ffffff;
+    color: #416a59;
+}
+
+footer .footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+footer .footer-top .important-link ul {
+    margin-top: 20px;
+}
+
+footer .footer-top .important-link ul li {
+    display: inline-block;
+}
+
+footer .footer-top .important-link ul li a {
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #fff;
+    margin-right: 20px;
+}
+
+footer .footer-top .news-letter p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+footer .footer-top .news-letter .letter {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+footer .footer-top .news-letter .letter input {
+    width: 300px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 10px;
+
+
+}
+
+footer .footer-top .news-letter .letter button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding: 10px 10px;
+
+}
+
+.line {
+    background-color: #FFFFFF;
+    height: 2px;
+}
+
+footer .footer-bottom p {
+    color: #FFFFFF;
+}
+
+footer .footer-bottom p a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #f2f2f2;
+
+}
+
+footer .footer-bottom p span {
+    margin: 0 10px;
+}
+
+footer .footer-bottom .rights {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer-bottom small {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    color: #f2f2f2
+}
+
+footer .footer-bottom .social ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+footer .footer-bottom .social ul li a i {
+    font-size: 16px;
+    color: #fff
+}
+
+/* =========================
+       footer css end
+   ========================= */
+/* =========================
+       blog css start
+   ========================= */
+.blog-titile {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 21px;
+    color: #416a59;
+    margin: 60px 0 40px 0;
+}
+
+.accordion button {
+    background-color: #416a59;
+    color: #ffffff;
+}
+
+.accordion-button:focus {
+    border-color: none;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #FFFFFF;
+    background-color: #416a59;
+    box-shadow: none;
+}
+
+/* =========================
+       blog css end
+   ========================= */
+
