@@ -68,18 +68,8 @@
         <div class="container">
             <div class="news-top">
                 <!----------category  html start ----------->
-                <div class="categories">
-                    <ul>
-                        <li class="active">Home</li>
-                        <li>Breaking news</li>
-                        <li>Home</li>
-                        <li>Breaking news</li>
-                        <li>Home</li>
-                        <li>Breaking news</li>
-                        <li>Home</li>
-                        <li>Breaking news</li>
-                        <li>Home</li>
-                    </ul>
+                <div class="categories" id="all-categories" >
+                    
                 </div>
                 <!----------category  html end ----------->
                 <!---------- search resutl html start ----------->
@@ -106,50 +96,15 @@
                 <!---------- sort html end ----------->
             </div>
             <!---------- news html start ----------->
-            <div class="news-main">
-                <div class="news">
-                    <div class="news-thumbnail">
-                        <img src="assets/images/newsThumbnail.png" alt="">
+            <div class="news-main" id="news-main">
+                <div class="d-flex justify-content-center d-none" id="spinner-show" >
+                    <div class="spinner-border" role="status">
+                      <span class="visually-hidden">Loading...</span>
                     </div>
-                    <div class="news-inner">
-                        <div class="news-description">
-                            <h2 class="news-title">The best fashion influencers to follow for sartorial inspiration</h2>
-                            <p class="news-paragraph">From our favourite UK influencers to the best missives from Milan
-                                and the coolest New
-                                Yorkers, read on some of the best fashion blogs out there, and for even more
-                                inspiration, do
-                                head to our separate black fashion influencer round-up.
-                            </p>
-                            <p class="news-paragraph">
-                                Fancy some shopping deals? Check out these amazing sales: Zara Black Friday, ASOS Black
-                                Friday, Missoma Black Friday and Gucci Black Friday...</p>
-                        </div>
-                        <div class="other-informations">
-                            <div class="author">
-                                <div class="author-image">
-                                    <img src="assets/images/Rectangle 19.png" alt="">
-                                </div>
-                                <div class="author-designation">
-                                    <p class="author-name">Jane Cooper</p>
-                                    <p class="author-date">Jan 10, 2022 </p>
-                                </div>
-                            </div>
-                            <div class="views">
-                                <p><i class="fa-solid fa-eye"></i><span class="view-count">1.5</span></p>
-                            </div>
-                            <div class="ratings">
-                                <ul>
-                                    <li><i class="fa-regular fa-star"></i></li>
-                                    <li><i class="fa-regular fa-star"></i></li>
-                                    <li><i class="fa-regular fa-star"></i></li>
-                                    <li><i class="fa-regular fa-star"></i></li>
-                                    <li><i class="fa-regular fa-star"></i></li>
-                                </ul>
-                            </div>
-                            <a class="detail-btn" href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
-                                    class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+                  </div>
+
+                  <div class="d-none text-center text-danger fs-6 fw-semibold" id="newsEmptyError">
+                    <p>No data to show</p>
                 </div>
 
                 <!-- Modal -->
@@ -164,10 +119,9 @@
                             <div class="modal-body">
 
                                 <div class="modal-inner">
-                                    <h3 class="detail-titile">Biden Pledges Nearly $3 Billion To Ukraine In Largest
-                                        U.S. Military Aid Package Yet</h3>
+                                    <h3 class="detail-titile" id="detail-titile"></h3>
                                     <div class="news-banner">
-                                        <img src="assets/images/jonbiden.png" alt="">
+                                        <img id="detail-image"  alt="">
                                     </div>
                                     <div class="news-details">
 
