@@ -9,6 +9,7 @@
 ul,
 ol {
     list-style: none;
+    padding-left: 0;
 }
 
 a,
@@ -28,9 +29,10 @@ p {
     padding: 0;
 }
 
-body{
+body {
     background: #F6F6F7;
 }
+
 /* =========================
        common css end
    ========================= */
@@ -109,7 +111,7 @@ nav {
 /* =========================
        main css start
    ========================= */
-   /* ========categories css start======== */
+/* ========categories css start======== */
 .categories {
     margin-top: 40px;
 }
@@ -127,8 +129,9 @@ nav {
     line-height: 21px;
     color: #858585;
 }
-  /* ========categories css start======== */
-  /* ========search result css start======== */
+
+/* ========categories css start======== */
+/* ========search result css start======== */
 .search-result {
     background: #FFFFFF;
     border-radius: 8px;
@@ -143,13 +146,130 @@ nav {
     color: #000000;
     padding: 21px 18px;
 }
- /* ========search result css start======== */
- /* ========sort result css start======== */
- .sort-result{
+
+/* ========search result css start======== */
+/* ========sort result css start======== */
+.sort-result {
     display: flex;
     justify-content: space-between;
- }
- /* ========sort result css end======== */
+}
+
+/* ========sort result css end======== */
+
+/* =============================
+    -------news css start--------
+    ============================= */
+.news-main .news {
+    display: flex;
+    background: #FFFFFF;
+    box-shadow: 4px 6px 13px rgba(215, 215, 215, 0.25);
+    border-radius: 12px;
+    padding: 20px 50px 20px 20px;
+}
+
+.news-main .news .news-thumbnail {
+    width: 350px;
+    height: 280px;
+}
+
+.news-main .news .news-thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.news-main .news .news-inner {
+    margin-left: 40px;
+    padding-top: 20px;
+}
+
+.news-main .news .news-description .news-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    color: #121221;
+    margin-bottom: 15px;
+}
+
+.news-main .news .news-description .news-paragraph {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #949494;
+    margin-bottom: 20px;
+}
+
+.news-main .news .other-informations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-main .news .other-informations .author {
+    display: flex;
+    align-items: center;
+}
+
+.news-main .news .other-informations .author .author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.news-main .news .other-informations .author .author-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.news-main .news .other-informations .author .author-designation {
+  margin-left: 10px;
+}
+
+.news-main .news .other-informations .author .author-designation .author-name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2B2C34;
+}
+
+.news-main .news .other-informations .author .author-designation .author-date {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    color: #718797;
+}
+
+.news-main .news .other-informations .views {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #515151;
+}
+.news-main .news .other-informations .views i{
+   margin-right: 10px;
+   font-size: 20px;
+}
+
+.news-main .news .other-informations .ratings ul{
+    display: flex;
+}
+.news-main .news .other-informations .ratings ul li{
+    font-size: 20px;
+    color: #515151;
+    margin-left: 10px;
+}
+
+.news-main .news .other-informations .detail-btn{
+    color: #5D5FEF;
+    font-size: 25px;
+}
+
+/* =============================
+    -------news css end--------
+    ============================= */
 /* =========================
        main css end
    ========================= */
