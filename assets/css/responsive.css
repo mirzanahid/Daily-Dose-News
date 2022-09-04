@@ -68,28 +68,33 @@
 		width: 100%;
 		object-fit: cover;
 		object-position: top center;
-		height: 500px;
+		height: auto;
 	}
 
 	.news-main .news .news-inner {
 		margin-left: 0;
 	}
 
-	.news-main .news .other-informations {
-		grid-template-columns: repeat(2, 1fr);
-		row-gap: 20px;
-
-	}
+	
 
 	.news-main .news .other-informations .views {
 		justify-self: center;
 	}
 
-	.news-main .news .other-informations .ratings ul li {
-		margin-left: 0;
-		margin-right: 10px;
+	.author .author-designation .author-name {
+		font-size: 14px;
+	
 	}
+	.news-main .news .other-informations .views span {
+		font-size: 14px;
+	}
+	.news-main .news .other-informations .views i {
+		font-size: 16px;
 
+	}
+	.news-main .news .other-informations .detail-btn {
+		font-size: 20px;
+	}
 	.news-main .news .other-informations .detail-btn {
 		justify-self: center;
 	}
@@ -154,11 +159,11 @@
 	.published p,
 	.views p {
 		margin-left: 0;
-		margin-top: 10px;
+		margin-top: 0;
 	}
 
-	.published {
-		margin-top: 10px;
+	.published p {
+		margin: 10px 0;
 	}
 
 	/*===============modal responsive css end=================*/
@@ -243,20 +248,13 @@
 		margin-left: 0;
 	}
 
-	.news-main .news .other-informations {
-		grid-template-columns: repeat(2, 1fr);
-		row-gap: 20px;
-
-	}
+	
 
 	.news-main .news .other-informations .views {
 		justify-self: center;
 	}
 
-	.news-main .news .other-informations .ratings ul li {
-		margin-left: 0;
-		margin-right: 10px;
-	}
+	
 
 	.news-main .news .other-informations .detail-btn {
 		justify-self: center;
@@ -314,19 +312,19 @@
 	}
 
 	.modal-informantions {
-		align-items: start;
-		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
 
 	}
 
 	.published p,
 	.views p {
 		margin-left: 0;
-		margin-top: 10px;
+		margin-top: 0;
 	}
 
-	.published {
-		margin-top: 10px;
+	.published p {
+		margin: 0 0;
 	}
 
 	/*===============modal responsive css end=================*/
@@ -409,20 +407,13 @@
 		margin-left: 0;
 	}
 
-	.news-main .news .other-informations {
-		grid-template-columns: repeat(2, 1fr);
-		row-gap: 20px;
-
-	}
+	
 
 	.news-main .news .other-informations .views {
 		justify-self: center;
 	}
 
-	.news-main .news .other-informations .ratings ul li {
-		margin-left: 0;
-		margin-right: 10px;
-	}
+	
 
 	.news-main .news .other-informations .detail-btn {
 		justify-self: center;
@@ -480,19 +471,19 @@
 	}
 
 	.modal-informantions {
-		align-items: start;
-		flex-direction: column;
+		align-items: center;
+		
 
 	}
 
 	.published p,
 	.views p {
 		margin-left: 0;
-		margin-top: 10px;
+		margin-top: 0;
 	}
 
-	.published {
-		margin-top: 10px;
+	.published p {
+		margin: 0 60px;
 	}
 
 	/*===============modal responsive css end=================*/

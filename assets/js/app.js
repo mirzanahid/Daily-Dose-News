@@ -117,15 +117,7 @@ const displayCategoryNews = (allNews, tagNames) => {
                             <div class="views">
                                 <p><i class="fa-solid fa-eye"></i><span class="view-count">${news.total_view ? news.total_view : 'Not Found'}</span></p>
                             </div>
-                            <div class="ratings">
-                                <ul>
-                                    <li><i class="fa-regular fa-star"></i></li>
-                                    <li><i class="fa-regular fa-star"></i></li>
-                                    <li><i class="fa-regular fa-star"></i></li>
-                                    <li><i class="fa-regular fa-star"></i></li>
-                                    <li><i class="fa-regular fa-star"></i></li>
-                                </ul>
-                            </div>
+                           
                             <a onclick="getCategoryDetails('${news._id}')" class="detail-btn" href="" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
                                     class="fa-solid fa-arrow-right"></i></a>
                         </div>
