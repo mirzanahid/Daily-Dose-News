@@ -1,3 +1,4 @@
+/* responsive for mobile */
 @media only screen and (max-width: 575.98px) {
 
 	/*===============header responsive css start=================*/
@@ -17,6 +18,11 @@
 
 	/*===============header responsive css start=================*/
 	/*===============main responsive css start=================*/
+	.categories {
+		flex-direction: column;
+		text-align: center;
+	}
+
 	.categories ul {
 		align-items: center;
 		flex-wrap: wrap;
@@ -24,9 +30,15 @@
 
 	.categories ul li {
 		background: #fff;
-		/* border: 1px solid #416a59; */
+		border: 1px solid #416a59;
+		margin-top: 0;
+		padding: 15px 0;
+	}
 
-		margin-top: 10px;
+	.categories ul .active {
+		font-weight: 500;
+		color: #fff;
+		background-color: #416a59;
 	}
 
 	.search-result p {
@@ -52,6 +64,13 @@
 		width: 100%;
 	}
 
+	.news-main .news .news-thumbnail img {
+		width: 100%;
+		object-fit: cover;
+		object-position: top center;
+		height: 500px;
+	}
+
 	.news-main .news .news-inner {
 		margin-left: 0;
 	}
@@ -61,6 +80,16 @@
 		row-gap: 20px;
 
 	}
+
+	.news-main .news .other-informations .views {
+		justify-self: center;
+	}
+
+	.news-main .news .other-informations .ratings ul li {
+		margin-left: 0;
+		margin-right: 10px;
+	}
+
 	.news-main .news .other-informations .detail-btn {
 		justify-self: center;
 	}
@@ -72,9 +101,11 @@
 		padding: 50px 0 10px 0;
 
 	}
-	.footer-logo{
-     font-size: 16px !important;
+
+	.footer-logo {
+		font-size: 16px !important;
 	}
+
 	footer .footer-top {
 		flex-direction: column;
 		padding-bottom: 15px;
@@ -113,15 +144,378 @@
 		width: auto;
 		height: auto;
 	}
+
 	.modal-informantions {
-		flex-wrap: wrap;
+		align-items: start;
+		flex-direction: column;
+
 	}
-	.published p, .views p {
+
+	.published p,
+	.views p {
 		margin-left: 0;
+		margin-top: 10px;
 	}
-	.published{
-      margin-top: 10px;
+
+	.published {
+		margin-top: 10px;
 	}
+
 	/*===============modal responsive css end=================*/
 
+}
+
+/* responsive for landscape mobile  device */
+
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+
+	/*===============header responsive css start=================*/
+	.logo {
+		font-size: 14px !important;
+	}
+
+	.page-link a {
+		margin-top: 30px;
+		margin-left: 0;
+	}
+
+	.nav-profile {
+		margin-left: 0;
+		margin-top: 15px;
+	}
+
+	/*===============header responsive css start=================*/
+	/*===============main responsive css start=================*/
+	.categories {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.categories ul {
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.categories ul li {
+		background: #fff;
+		border: 1px solid #416a59;
+		margin-top: 0;
+		padding: 15px 0;
+	}
+
+	.categories ul .active {
+		font-weight: 500;
+		color: #fff;
+		background-color: #416a59;
+	}
+
+	.search-result p {
+		font-size: 16px;
+	}
+
+	.sort-result {
+		flex-direction: column;
+
+	}
+
+	.sort-btns {
+		margin-top: 30px;
+	}
+
+	/* ==============------news start----------========= */
+	.news-main .news {
+		padding: 20px 15px 20px 15px;
+		flex-direction: column;
+	}
+
+	.news-main .news .news-thumbnail {
+		width: 100%;
+	}
+
+	.news-main .news .news-thumbnail img {
+		width: 100%;
+		object-fit: cover;
+		object-position: top center;
+		height: 500px;
+	}
+
+	.news-main .news .news-inner {
+		margin-left: 0;
+	}
+
+	.news-main .news .other-informations {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 20px;
+
+	}
+
+	.news-main .news .other-informations .views {
+		justify-self: center;
+	}
+
+	.news-main .news .other-informations .ratings ul li {
+		margin-left: 0;
+		margin-right: 10px;
+	}
+
+	.news-main .news .other-informations .detail-btn {
+		justify-self: center;
+	}
+
+	/* ==============------news end----------========= */
+	/*===============main responsive css end=================*/
+	/*===============footer responsive css start=================*/
+	footer {
+		padding: 50px 0 10px 0;
+
+	}
+
+	.footer-logo {
+		font-size: 16px !important;
+	}
+
+	footer .footer-top {
+		flex-direction: column;
+		padding-bottom: 15px;
+	}
+
+	footer .footer-top .important-link ul li a {
+		margin-right: 9px;
+		margin-top: 10px;
+
+	}
+
+	footer .footer-bottom .rights {
+		align-items: start;
+		flex-direction: column;
+		margin-top: 10px;
+	}
+
+	footer .footer-bottom .social ul li {
+		margin-left: 0;
+		margin-right: 10px;
+		margin-top: 10px;
+	}
+
+	footer .footer-bottom p a {
+		font-size: 13px;
+
+	}
+
+	footer .footer-bottom p span {
+		margin: 0 4px;
+	}
+
+	/*===============footer responsive css end=================*/
+	/*===============modal responsive css start=================*/
+	.modal-inner .news-banner {
+		width: auto;
+		height: auto;
+	}
+
+	.modal-informantions {
+		align-items: start;
+		flex-direction: column;
+
+	}
+
+	.published p,
+	.views p {
+		margin-left: 0;
+		margin-top: 10px;
+	}
+
+	.published {
+		margin-top: 10px;
+	}
+
+	/*===============modal responsive css end=================*/
+
+}
+/* responsive for tablet device */
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+
+	/*===============header responsive css start=================*/
+	.logo {
+		font-size: 14px !important;
+	}
+
+	.page-link a {
+		margin-top: 30px;
+		margin-left: 0;
+	}
+
+	.nav-profile {
+		margin-left: 0;
+		margin-top: 15px;
+	}
+
+	/*===============header responsive css start=================*/
+	/*===============main responsive css start=================*/
+	.categories {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.categories ul {
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	.categories ul li {
+		background: #fff;
+		border: 1px solid #416a59;
+		margin-top: 0;
+		padding: 15px 0;
+	}
+
+	.categories ul .active {
+		font-weight: 500;
+		color: #fff;
+		background-color: #416a59;
+	}
+
+	.search-result p {
+		font-size: 16px;
+	}
+
+	.sort-result {
+		flex-direction: column;
+
+	}
+
+	.sort-btns {
+		margin-top: 30px;
+	}
+
+	/* ==============------news start----------========= */
+	.news-main .news {
+		padding: 20px 15px 20px 15px;
+		flex-direction: column;
+	}
+
+	.news-main .news .news-thumbnail {
+		width: 100%;
+	}
+
+	.news-main .news .news-thumbnail img {
+		width: 100%;
+		object-fit: cover;
+		object-position: top center;
+		height: 500px;
+	}
+
+	.news-main .news .news-inner {
+		margin-left: 0;
+	}
+
+	.news-main .news .other-informations {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 20px;
+
+	}
+
+	.news-main .news .other-informations .views {
+		justify-self: center;
+	}
+
+	.news-main .news .other-informations .ratings ul li {
+		margin-left: 0;
+		margin-right: 10px;
+	}
+
+	.news-main .news .other-informations .detail-btn {
+		justify-self: center;
+	}
+
+	/* ==============------news end----------========= */
+	/*===============main responsive css end=================*/
+	/*===============footer responsive css start=================*/
+	footer {
+		padding: 50px 0 10px 0;
+
+	}
+
+	.footer-logo {
+		font-size: 16px !important;
+	}
+
+	footer .footer-top {
+		flex-direction: column;
+		padding-bottom: 15px;
+	}
+
+	footer .footer-top .important-link ul li a {
+		margin-right: 9px;
+		margin-top: 10px;
+
+	}
+
+	footer .footer-bottom .rights {
+		align-items: start;
+		flex-direction: column;
+		margin-top: 10px;
+	}
+
+	footer .footer-bottom .social ul li {
+		margin-left: 0;
+		margin-right: 10px;
+		margin-top: 10px;
+	}
+
+	footer .footer-bottom p a {
+		font-size: 13px;
+
+	}
+
+	footer .footer-bottom p span {
+		margin: 0 4px;
+	}
+
+	/*===============footer responsive css end=================*/
+	/*===============modal responsive css start=================*/
+	.modal-inner .news-banner {
+		width: auto;
+		height: auto;
+	}
+
+	.modal-informantions {
+		align-items: start;
+		flex-direction: column;
+
+	}
+
+	.published p,
+	.views p {
+		margin-left: 0;
+		margin-top: 10px;
+	}
+
+	.published {
+		margin-top: 10px;
+	}
+
+	/*===============modal responsive css end=================*/
+
+}
+
+/* responsive for laptop device */
+@media only screen and (min-width: 992px) and (max-width: 1199.98px){
+	.news-main .news .news-thumbnail img {
+		width: 300px;
+		height: 340px;
+	}
+	.news-main .news .news-inner {
+		margin-left: 25px;
+		padding-top: 10px;
+	}
+	.news-main .news .other-informations .views i {
+	
+		font-size: 16px;
+	
+	}
+	.news-main .news .other-informations .views span {
+		font-size: 16px;
+	
+	}
 }

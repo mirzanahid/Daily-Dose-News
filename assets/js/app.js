@@ -14,58 +14,58 @@ const getCategories = async () => {
 }
 
 const displayCategory = categories => {
-
     categories.forEach(category => {
         const categoryList = document.getElementById('all-categories');
         const ul = document.createElement('ul');
         ul.innerHTML = `
-        <li onclick="getCategoryNews(${category.category_id})">${category.category_name}</li>
+        <li onclick="getCategoryNews('${category.category_id}',this)" id="categoryID" class="zero">${category.category_name}</li>
         `
         categoryList.appendChild(ul)
-
-
     })
-
 }
 
 
 // get categoris news
-const getCategoryNews = async (id) => {
-    const url = `https://openapi.programming-hero.com/api/news/category/0${id}`;
+const getCategoryNews = async (id,tagName) => {
+    const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
+
     try {
         const res = await fetch(url);
         const data = await res.json();
-        displayCategoryNews(data.data);
+        displayCategoryNews(data.data,tagName);
 
     }
     catch (error) {
         console.log(error);
     }
 
-
+  
 };
 
-
-
-
 // displaly category news
-const displayCategoryNews = allNews => {
-    // console.log(allNews)
-    //    console.log(allNews[0].category_id)
+const displayCategoryNews = (allNews, tagNames) => {
+    const lis = document.querySelectorAll('#categoryID')
+    for (const id of lis) {
+
+     
+        if (id.classList[1] === 'active') {
+           
+            id.classList.remove('active')
+        }
+
+        tagNames.classList.add('active')
+    };
+
     const newsMain = document.getElementById('news-main');
     newsMain.innerHTML = '';
-
-
-    const newsEmptyError = document.getElementById('newsEmptyError')
-
     //error for no data
+    const newsEmptyError = document.getElementById('newsEmptyError')
     if (allNews.length === 0) {
         newsEmptyError.classList.remove('d-none')
     }
     else {
         newsEmptyError.classList.add('d-none')
     }
-
     //category counter
     const catergoryCount = document.getElementById('catergory-count')
     catergoryCount.innerText = allNews.length;
@@ -86,23 +86,9 @@ const displayCategoryNews = allNews => {
         });
     }
 
-    console.log(value)
-
-    // allNews.sort((a, b) => {
-    //     return b.total_view - a.total_view;
-    // });
-
-
-
-    console.log(allNews)
-
 
     allNews.forEach(news => {
 
-        // console.log(news.total_view)
-
-        // array.push(`${news.total_view}`);
-        // console.log(array)
         const newsMain = document.getElementById('news-main');
         const div = document.createElement('div');
         div.classList.add('news');
@@ -113,7 +99,7 @@ const displayCategoryNews = allNews => {
                     </div>
                     <div class="news-inner">
                         <div class="news-description">
-                            <h2 class="news-title">${news.title ? news.title : 'no data to show'}</h2>
+                            <h2 class="news-title">${news.title ? news.title : 'Not Found'}</h2>
                             <p class="news-paragraph">${news.details.slice(0, 400) + '...'}
                             </p>
                            
@@ -124,12 +110,12 @@ const displayCategoryNews = allNews => {
                                     <img src="${news.author.img}" alt="">
                                 </div>
                                 <div class="author-designation">
-                                    <p class="author-name" id="author-name">${news.author.name ? news.author.name : 'no data to show'}</p>
-                                    <p class="author-date">${news.author.published_date ? news.author.published_date : 'no data to show'} </p>
+                                    <p class="author-name" id="author-name">${news.author.name ? news.author.name : 'Not Found'}</p>
+                                    <p class="author-date">${news.author.published_date ? new Date(news.author.published_date).toDateString().slice(4,16) : 'Not Found'} </p>
                                 </div>
                             </div>
                             <div class="views">
-                                <p><i class="fa-solid fa-eye"></i><span class="view-count">${news.total_view ? news.total_view : 'no data to show'}</span></p>
+                                <p><i class="fa-solid fa-eye"></i><span class="view-count">${news.total_view ? news.total_view : 'Not Found'}</span></p>
                             </div>
                             <div class="ratings">
                                 <ul>
@@ -179,26 +165,24 @@ const getCategoryDetails = async id => {
     catch (error) {
         console.log(error);
     }
-
-
 };
 
 //display category details 
-
 const displayCategoryDetails = (details) => {
-
     const detailTitile = document.getElementById('detail-titile');
-    detailTitile.innerText = `${details.title}`
+    detailTitile.innerText = `${details.title ? details.title : 'Not Found'}`
     const detailImage = document.getElementById('detail-image')
     detailImage.setAttribute('src', `${details.image_url}`)
     const authorImage = document.getElementById('detailsAuthor-image')
     authorImage.setAttribute('src', `${details.author.img}`)
     const authorName = document.getElementById('detailsAuthor-name');
-    authorName.innerText = `${details.author.name ? details.author.name : 'no data to show'}`
+    const detailPragraph = document.getElementById('detail-pragraph');
+    detailPragraph.innerText = `${details.details ? details.details : 'Not Found'}`
+    authorName.innerText = `${details.author.name ? details.author.name : 'Not Found'}`
     const publishedDate = document.getElementById('details-publishedDate');
-    publishedDate.innerText = `${details.author.published_date ? details.author.published_date : 'no data to show'}`
+    publishedDate.innerText = `${details.author.published_date ? new Date(details.author.published_date).toDateString().slice(4,16) : 'Not Found'}`
     const detailsView = document.getElementById('details-view');
-    detailsView.innerText = `${details.total_view}`
+    detailsView.innerText = `${details.total_view ? details.total_view : 'Not Found'}`
 }
 
 getCategories()
