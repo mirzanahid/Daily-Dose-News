@@ -18,7 +18,7 @@ const displayCategory = categories => {
         const categoryList = document.getElementById('all-categories');
         const ul = document.createElement('ul');
         ul.innerHTML = `
-        <li onclick="getCategoryNews('${category.category_id}',this)" id="categoryID" class="zero">${category.category_name}</li>
+        <li onclick="getCategoryNews('${category.category_id}',this)" id="categoryID" class="zero ${category.category_id == 7 ? 'active' : ''}">${category.category_name}</li>
         `
         categoryList.appendChild(ul)
     })
@@ -26,35 +26,38 @@ const displayCategory = categories => {
 
 
 // get categoris news
-const getCategoryNews = async (id,tagName) => {
+const getCategoryNews = async (id, tagName) => {
+
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
 
     try {
         const res = await fetch(url);
         const data = await res.json();
-        displayCategoryNews(data.data,tagName);
+        displayCategoryNews(data.data, tagName);
 
     }
     catch (error) {
         console.log(error);
     }
 
-  
-};
 
+};
+getCategoryNews('07', undefined)
 // displaly category news
 const displayCategoryNews = (allNews, tagNames) => {
-    const lis = document.querySelectorAll('#categoryID')
-    for (const id of lis) {
 
-     
+    const list = document.querySelectorAll('#categoryID')
+    for (const id of list) {
+
+
         if (id.classList[1] === 'active') {
-           
+
             id.classList.remove('active')
         }
 
         tagNames.classList.add('active')
     };
+
 
     const newsMain = document.getElementById('news-main');
     newsMain.innerHTML = '';
@@ -111,7 +114,7 @@ const displayCategoryNews = (allNews, tagNames) => {
                                 </div>
                                 <div class="author-designation">
                                     <p class="author-name" id="author-name">${news.author.name ? news.author.name : 'Not Found'}</p>
-                                    <p class="author-date">${news.author.published_date ? new Date(news.author.published_date).toDateString().slice(4,16) : 'Not Found'} </p>
+                                    <p class="author-date">${news.author.published_date ? new Date(news.author.published_date).toDateString().slice(4, 16) : 'Not Found'} </p>
                                 </div>
                             </div>
                             <div class="views">
@@ -172,7 +175,7 @@ const displayCategoryDetails = (details) => {
     detailPragraph.innerText = `${details.details ? details.details : 'Not Found'}`
     authorName.innerText = `${details.author.name ? details.author.name : 'Not Found'}`
     const publishedDate = document.getElementById('details-publishedDate');
-    publishedDate.innerText = `${details.author.published_date ? new Date(details.author.published_date).toDateString().slice(4,16) : 'Not Found'}`
+    publishedDate.innerText = `${details.author.published_date ? new Date(details.author.published_date).toDateString().slice(4, 16) : 'Not Found'}`
     const detailsView = document.getElementById('details-view');
     detailsView.innerText = `${details.total_view ? details.total_view : 'Not Found'}`
 }

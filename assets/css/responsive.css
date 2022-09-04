@@ -73,8 +73,8 @@
 
 	.news-main .news .news-inner {
 		margin-left: 0;
+		width: auto;
 	}
-
 	
 
 	.news-main .news .other-informations .views {
@@ -253,6 +253,7 @@
 
 	.news-main .news .news-inner {
 		margin-left: 0;
+		width: auto;
 	}
 
 	
@@ -418,6 +419,7 @@
 
 	.news-main .news .news-inner {
 		margin-left: 0;
+		width: auto;
 	}
 
 	
@@ -512,6 +514,7 @@
 	.news-main .news .news-inner {
 		margin-left: 25px;
 		padding-top: 10px;
+		width: auto;
 	}
 	.news-main .news .other-informations .views i {
 	

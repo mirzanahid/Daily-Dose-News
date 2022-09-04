@@ -238,6 +238,7 @@ main {
 .news-main .news .news-inner {
     margin-left: 40px;
     padding-top: 20px;
+    width: 900px;
 }
 
 .news-main .news .news-description .news-title {
