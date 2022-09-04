@@ -167,6 +167,13 @@
 	}
 
 	/*===============modal responsive css end=================*/
+	/*===============blog responsive css end=================*/
+	.blog-titile {
+		font-size: 28px;
+		line-height: 30px;
+		
+	}
+	/*===============blog responsive css end=================*/
 
 }
 
@@ -328,7 +335,13 @@
 	}
 
 	/*===============modal responsive css end=================*/
-
+	/*===============blog responsive css end=================*/
+	.blog-titile {
+		font-size: 30px;
+		line-height: 30px;
+		
+	}
+	/*===============blog responsive css end=================*/
 }
 /* responsive for tablet device */
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {

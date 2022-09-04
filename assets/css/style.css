@@ -589,6 +589,10 @@ footer .footer-bottom .social ul li a i {
 .addDot{
     list-style: disc;
 }
+
+.accordion .addNumber{
+    list-style: decimal;
+}
 /* =========================
        blog css end
    ========================= */
