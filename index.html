@@ -29,7 +29,7 @@
         ================================ -->
 
     <header>
-        <nav class="navbar navbar-expand-lg shadow-sm ">
+        <nav class="navbar navbar-expand-lg shadow-sm  fixed-top">
             <div class="container">
                 <a class="navbar-brand logo" href="index.html"><span class="logo-background">Daily-Dose</span> News</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -68,13 +68,13 @@
         <div class="container">
             <div class="news-top">
                 <!----------category  html start ----------->
-                <div class="categories" id="all-categories" >
-                    
+                <div class="categories" id="all-categories">
+
                 </div>
                 <!----------category  html end ----------->
                 <!---------- search resutl html start ----------->
                 <div class="search-result">
-                    <p>4 items found in Entertainment </p>
+                    <p><span id="catergory-count">0</span> items found in this category </p>
                 </div>
                 <!---------- search resutl html end ----------->
                 <!---------- sort html start ----------->
@@ -83,8 +83,7 @@
                         <label for="news">Sort By View:</label>
 
                         <select id="news">
-                            <option value="Default" selected>Default</option>
-                            <option value="Views">Views</option>
+                            <option value="Views" selected="selected">Views</option>
                             <option value="Ratings">Ratings</option>
                         </select>
                     </div>
@@ -97,67 +96,57 @@
             </div>
             <!---------- news html start ----------->
             <div class="news-main" id="news-main">
-                <div class="d-flex justify-content-center d-none" id="spinner-show" >
-                    <div class="spinner-border" role="status">
-                      <span class="visually-hidden">Loading...</span>
-                    </div>
-                  </div>
 
-                  <div class="d-none text-center text-danger fs-6 fw-semibold" id="newsEmptyError">
-                    <p>No data to show</p>
-                </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-
-                                <div class="modal-inner">
-                                    <h3 class="detail-titile" id="detail-titile"></h3>
-                                    <div class="news-banner">
-                                        <img id="detail-image"  alt="">
-                                    </div>
-                                    <div class="news-details">
-
-                                        <p class="detail-pragraph">Wednesday, August 24, 2022 | Tag Cloud Tags: Biden,
-                                            EU, Euro, Europe, Joe Biden, Military, News, Russia, Security, UK, Ukraine,
-                                            United States, Worthy News (Worthy News) - U.S. President Joe Biden has
-                                            announced nearly $3 billion in new U.S. military aid for Kyiv as Ukraine
-                                            marked its independence day six months after Russia invaded the country.'The
-                                            United States of America is committed to supporting the people of Ukraine as
-                                            they continue the fight to defend their sovereignty. As part of that
-                                            commitment, I am proud to announce our biggest tranche of security
-                                            assistance to date: approximately $2.</p>
-                                    </div>
-                                </div>
-                                <div class="modal-informantions">
-                                    <div class="author">
-                                        <div class="author-image">
-                                            <img src="assets/images/Rectangle 19.png" alt="">
-                                        </div>
-                                        <div class="author-designation">
-                                            <p class="author-name modal-author">Jane Cooper</p>
-                                        </div>
-
-                                    </div>
-                                    <div class="published">
-                                        <p>Published Date: <span>2022-08-24</span></p>
-                                    </div>
-                                    <div class="views">
-                                        <p>Views: <span>200</span></p>
-                                    </div>
-                                </div>
-                            </div>
-
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
+                        <div class="modal-body">
+                            <div class="modal-inner">
+                                <h3 class="detail-titile" id="detail-titile"></h3>
+                                <div class="news-banner">
+                                    <img id="detail-image"  alt="">
+                                </div>
+                                <div class="news-details">
+
+                                    <p class="detail-pragraph"></p>
+                                </div>
+                            </div>
+                            <div class="modal-informantions">
+                                <div class="author">
+                                    <div class="author-image">
+                                        <img id="detailsAuthor-image"  alt="">
+                                    </div>
+                                    <div class="author-designation">
+                                        <p class="author-name modal-author" id="detailsAuthor-name">Jane Cooper</p>
+                                    </div>
+
+                                </div>
+                                <div class="published">
+                                    <p>Published Date: <span id="details-publishedDate">2022-08-24</span></p>
+                                </div>
+                                <div class="views">
+                                    <p>Views: <span id="details-view">200</span></p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+            </div>
+            <div class="d-flex justify-content-center d-none" id="spinner-show">
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <div class="d-none text-center text-danger fs-6 fw-semibold" id="newsEmptyError">
+                <p>No data to show</p>
             </div>
             <!---------- news html end ----------->
         </div>

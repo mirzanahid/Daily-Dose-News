@@ -39,6 +39,7 @@ p {
    ========================= */
 nav {
     padding: 15px 0;
+    background-color: #fff;
 }
 
 .logo {
@@ -115,6 +116,9 @@ nav {
        main css start
    ========================= */
 /* ========categories css start======== */
+main{
+    margin-top: 100px;
+}
 .categories {
     margin-top: 40px;
     display: flex;
